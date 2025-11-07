@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Research from "./pages/Research";
 import Community from "./pages/Community";
-import FloatChatAI from "./pages/FloatChatAI";
+import FloatChatAI from "./pages/FloatChatAi";
 import Explore from "./pages/Explore";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
