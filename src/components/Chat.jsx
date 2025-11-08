@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 /**
  * Chat component — improved, debugged, and enhanced visually.
  * - Exported as Chat (so pages import it correctly).
- * - Keeps behavior: sends POST to http://localhost:3000/chat expecting { reply }.
+ * - Keeps behavior: sends POST to https://floatchat-backend-ig0f.onrender.com/chat expecting { reply }.
  * - Preserves helpful error messages for connection issues.
  */
 
@@ -50,7 +50,7 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3000/chat", {
+      const res = await fetch("https://floatchat-backend-ig0f.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input })
@@ -73,7 +73,7 @@ export default function Chat() {
         {
           role: "assistant",
           content:
-            "⚠️ Error connecting to the backend. Make sure server is running at http://localhost:3000 and CORS is enabled."
+            "⚠️ Error connecting to the backend. Make sure server is running at https://floatchat-backend-ig0f.onrender.com and CORS is enabled."
         }
       ]);
     } finally {
